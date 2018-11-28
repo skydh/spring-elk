@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="LOGSTASH" class="com.cwbase.logback.RedisAppender">
+        <source>SpringELK</source>
+        <type>dev-type</type>
+        <tags>dev</tags>
+        <host>127.0.0.1</host>
+        <port>6379</port>
+        <key>logstash</key>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="LOGSTASH" />
+    </root>
+</configuration>
